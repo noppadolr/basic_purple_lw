@@ -22,6 +22,7 @@
 
 		<!-- Icons css -->
 		<link href="{{ asset('admin/assets/css/icons.min.css') }}" rel="stylesheet" type="text/css" />
+        @vite(['resources/css/app.css', 'resources/js/app.js'])
     </head>
 
     <body class="authentication-bg authentication-bg-pattern">
@@ -60,7 +61,7 @@
 
                                     <div class="mb-3">
                                         <label for="username" class="form-label">Username</label>
-                                        <input class="form-control @error('username') is-invalid @enderror" type="text" name="username" id="username" placeholder="Enter your username">
+                                        <input class="form-control @error('username') is-invalid @enderror" type="text" name="username" id="username" value="admin" placeholder="Enter your username">
                                         @error('username')
                                             <span class="text-danger">{{ $message }}</span>
                                         @enderror
@@ -69,7 +70,7 @@
                                     <div class="mb-3">
                                         <label for="password" class="form-label">Password</label>
                                         <div class="input-group input-group-merge">
-                                            <input type="password" id="password" class="form-control @error('password') is-invalid @enderror" placeholder="Enter your password">
+                                            <input type="password" id="password" name="password" value="111" class="form-control @error('password') is-invalid @enderror" placeholder="Enter your password">
                                             <div class="input-group-text" data-password="false">
                                                 <span class="password-eye"></span>
                                             </div>

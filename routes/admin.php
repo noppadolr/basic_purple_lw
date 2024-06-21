@@ -1,12 +1,13 @@
 <?php
 
-
+use App\Http\Controllers\Controller;
 use Illuminate\Support\Facades\Route;
+use App\Http\Controllers\Admin\AdminController;
 
-Route::view('test','layouts.admin.master')->name('test');
+
 require __DIR__.'/auth.php';
 
-Route::view('login/page','backend.login')->name('login.page');
+// Route::view('login/page','backend.login')->name('login.page');
 
 // Route::controller(CustomerController::class)
 // ->prefix('customer')
@@ -18,7 +19,22 @@ Route::view('login/page','backend.login')->name('login.page');
 //     Route::post('/store', 'store')->name('store');
 //     Route::get('/delete/{id}', 'destroy')->name('delete');
 //     Route::get('/edit/{id}','edit')->name('edit');
-//     Route::post('/update','update')->name('update');
-    
+//     Route::post('/update','update')->name('update');  
 
 // });
+
+
+Route::controller(AdminController::class)
+->prefix('admin')
+->as('admin.')
+->group(function(){
+    Route::get('/login','LoginPage')->name('login');
+});
+
+Route::controller(AdminController::class)
+->prefix('admin')
+->as('admin.')
+->middleware('authen')
+->group(function(){
+    Route::get('/dashboard','index')->name('dashboard');
+});

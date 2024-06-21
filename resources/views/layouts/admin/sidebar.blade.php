@@ -92,7 +92,7 @@
             </li> --}}
 
             <li class="menu-item">
-                <a href="{{ route('test') }}" class="menu-link">
+                <a href="{{ route('admin.dashboard') }}" class="menu-link">
                     <span class="menu-icon"><i data-feather="airplay"></i></span>
                     <span class="menu-text"> Dashboard </span>
                 </a>
