@@ -118,46 +118,30 @@
                                 <span class="menu-text">Products</span>
                             </a>
                         </li>
+
+                    </ul>
+                </div>
+            </li>
+
+            <li class="menu-item">
+                <a href="#menuSupplier" data-bs-toggle="collapse" class="menu-link">
+                    <span class="menu-icon"><i data-feather="fas fa-address-card"></i></span>
+                    <span class="menu-text"> Manage Supplier </span>
+                    <span class="menu-arrow"></span>
+                </a>
+                <div class="collapse" id="menuSupplier">
+                    <ul class="sub-menu">
                         <li class="menu-item">
-                            <a href="ecommerce-product-detail.html" class="menu-link">
-                                <span class="menu-text">Product Detail</span>
+                            <a href="#" class="menu-link">
+                                <span class="menu-text">Supplier All</span>
                             </a>
                         </li>
                         <li class="menu-item">
-                            <a href="ecommerce-product-edit.html" class="menu-link">
-                                <span class="menu-text">Add Product</span>
+                            <a href="ecommerce-products.html" class="menu-link">
+                                <span class="menu-text">Products</span>
                             </a>
                         </li>
-                        <li class="menu-item">
-                            <a href="ecommerce-customers.html" class="menu-link">
-                                <span class="menu-text">Customers</span>
-                            </a>
-                        </li>
-                        <li class="menu-item">
-                            <a href="ecommerce-orders.html" class="menu-link">
-                                <span class="menu-text">Orders</span>
-                            </a>
-                        </li>
-                        <li class="menu-item">
-                            <a href="ecommerce-order-detail.html" class="menu-link">
-                                <span class="menu-text">Order Detail</span>
-                            </a>
-                        </li>
-                        <li class="menu-item">
-                            <a href="ecommerce-sellers.html" class="menu-link">
-                                <span class="menu-text">Sellers</span>
-                            </a>
-                        </li>
-                        <li class="menu-item">
-                            <a href="ecommerce-cart.html" class="menu-link">
-                                <span class="menu-text">Shopping Cart</span>
-                            </a>
-                        </li>
-                        <li class="menu-item">
-                            <a href="ecommerce-checkout.html" class="menu-link">
-                                <span class="menu-text">Checkout</span>
-                            </a>
-                        </li>
+
                     </ul>
                 </div>
             </li>

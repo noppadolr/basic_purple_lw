@@ -94,7 +94,7 @@
 </div>
 
 @push('scripts')   
-        <script>
+        {{-- <script>
             @if(Session::has('success'))
                 // alert('success');
                 $(document).ready( function () {
@@ -114,7 +114,7 @@
                     
                     });    
             @endif
-        </script>
+        </script> --}}
 @endpush
 
 @endsection

@@ -37,7 +37,9 @@
 
         <!-- Icons css -->
         <link href="{{ asset('admin/assets/css/icons.min.css') }}" rel="stylesheet" type="text/css" />
-        <link href="https://cdn.jsdelivr.net/npm/sweetalert2@11.12.0/dist/sweetalert2.min.css" rel="stylesheet">
+        {{-- <link href="https://cdn.jsdelivr.net/npm/sweetalert2@11.12.0/dist/sweetalert2.min.css" rel="stylesheet"> --}}
+
+        <link rel="stylesheet" href="{{ asset('sweetalert/sweetalert2.min.css') }}">
         @stack('styles')
         @vite(['resources/js/app.js'])
 
@@ -109,10 +111,32 @@
 
         <!-- Dashboar 1 init js-->
         <script src="{{ asset('admin/assets/js/pages/dashboard-1.init.js') }}"></script>
-        <script src="
-                 https://cdn.jsdelivr.net/npm/sweetalert2@11.12.0/dist/sweetalert2.all.min.js
-        "></script>
- 
+        {{-- <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11.12.0/dist/sweetalert2.all.min.js"></script> --}}
+
+        <script src="{{ asset('sweetalert/sweetalert2.all.min.js') }}"></script>
+               <!-- custom dmeo js-->
+               <script src="{{ asset('admin/assets/js/pages/fontawesome.init.js') }}"></script>
+        <script>
+            @if(Session::has('success'))
+                // alert('success');
+                $(document).ready( function () {
+                    Swal.fire({
+                        position: "bottom-start",
+                        icon: "success",
+                        title: "{{ session('success') }}",
+                        showConfirmButton: false,
+                        timer: 2500,
+                        toast :true,
+                        backdrop : false,
+                        timerProgressBar: true,
+                        width: '300px',
+                        height: '40px',
+                        
+                        });
+                    
+                    });    
+            @endif
+        </script>
         @stack('scripts')
         {{-- @include('sweetalert::alert') --}}
 
