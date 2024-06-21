@@ -93,10 +93,7 @@
     </div> <!-- end col-->
 </div>
 
-@push('scripts')
-    
-
-
+@push('scripts')   
         <script>
             @if(Session::has('success'))
                 // alert('success');
@@ -118,7 +115,6 @@
                     });    
             @endif
         </script>
-
 @endpush
 
 @endsection
